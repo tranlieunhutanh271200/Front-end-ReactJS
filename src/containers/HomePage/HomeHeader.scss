@@ -1,8 +1,11 @@
 .home-header-container{
     height:60px;
-    border: 1px solid red;
     width: 100%;
     padding: 0 40px;
+    position:sticky;
+    z-index: 10000;
+    background:white;
+    top: 0;
     
     .home-header-content{
         width: 100%;
@@ -10,8 +13,8 @@
         display: flex;
        
         .left-content{
-            width: 25%;
-            border: 1px solid red;
+            width: 20%;
+    
             display: flex;
             align-items:center;
             .header-logo{
@@ -28,8 +31,7 @@
             }
         }
         .center-content{
-            width: 50%;
-            border: 1px solid red;
+            width: 55%;
             display: flex;
             justify-content: space-between;
             align-items:center ;
@@ -41,8 +43,8 @@
             }
         }
         .right-content{
+            cursor: pointer;
             width: 25%;
-            border: 1px solid red;
             display: flex;
             justify-content:center;
             align-items:center;
@@ -57,32 +59,33 @@
                 }
             }
             .language-vi{
-                cursor: pointer;
+                margin-right: 10px;
                 opacity: 0.2;
                 &.active{
                     span{
-                      
-                    color: blue;
+                        
+                        color: blue;
                     }
                 }
                 &:hover{
+                    cursor: pointer;
                     opacity: 1;
                 }
                 
             }
             .language-en{
                 opacity: 0.2;
-                margin:0 10px;
+                margin-left: 10px;
                 
                 &.active{
                
                     span{
-                        cursor: pointer;
                     color:orange;
                     }
                 }
                 &:hover{
                     opacity: 1;
+                    
                 }
             }
         }
@@ -139,6 +142,7 @@
         }
     }
     .container-down{
+        padding-bottom: 10px;
         height: 35%;
         display: flex;
         align-items: flex-end;
